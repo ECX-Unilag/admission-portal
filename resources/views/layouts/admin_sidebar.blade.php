@@ -143,7 +143,13 @@
                             <a href="calendar.html" class="waves-effect"><i class="icon-calendar"></i><span> Admin Manager </span></a>
                         </li>
                         <li>
-                            <a href="/course" class="waves-effect"><i class="icon-calendar"></i><span> Course </span></a>
+                            <a href="/course" class="waves-effect"><i class="icon-pencil"></i><span> Course </span></a>
+                        </li>
+                        <li>
+                            <a href="/department" class="waves-effect"><i class="icon-home"></i><span> Department </span></a>
+                        </li>
+                        <li>
+                            <a href="/sessions" class="waves-effect"><i class="icon-calendar"></i><span> Sessions </span></a>
                         </li>
 
                         <!-- <li>

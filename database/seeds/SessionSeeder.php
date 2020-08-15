@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
-class DatabaseSeeder extends Seeder
+class SessionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,10 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            userSeeder::class,
-            DepartmentSeeder::class,
-            SessionSeeder::class,
+        DB::table('sessions')->insert([
+            'session' => Str::random(4).'-'.Str::random(4),
         ]);
     }
 }

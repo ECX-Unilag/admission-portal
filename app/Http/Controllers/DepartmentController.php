@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Course;
+use App\Department;
 use Illuminate\Http\Request;
 
-class courseController extends Controller
+class DepartmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class courseController extends Controller
      */
     public function index()
     {
-        return view('administrator.course')->with('course',Course::orderBy('course_id','DESC')->get());
+        return view('administrator.department')->with('department',Department::orderBy('dept_id','DESC')->get());
     }
 
     /**
@@ -36,23 +36,21 @@ class courseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'course' => 'required | min:3',
+            'department' => 'required | min:3',
         ]);
-        $course = new Course;
-        $course->title = $request->input('course');
-        $course->save();
-        return redirect()->action('courseController@index')
-            ->with('success','Course Added')
-            ->with('course',Course::orderBy('course_id','DESC')->get());
+        $department = new Department;
+        $department->department = $request->input('department');
+        $department->save();
+        return redirect()->action('DepartmentController@index')->with('success','Department Added')->with('department',Department::orderBy('dept_id','DESC')->get());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Course  $course
+     * @param  \App\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show(Department $department)
     {
         //
     }
@@ -60,10 +58,10 @@ class courseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Course  $course
+     * @param  \App\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(Department $department)
     {
         //
     }
@@ -72,10 +70,10 @@ class courseController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Course  $course
+     * @param  \App\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, Department $department)
     {
         //
     }
@@ -83,14 +81,14 @@ class courseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Course  $course
+     * @param  \App\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy(Department $department)
     {
-        $course->delete();
-        return redirect()->action('courseController@index')
-        ->with('success','Course Deleted')
-        ->with('course',Course::orderBy('course_id','DESC')->get());
+        $department->delete();
+        return redirect()->action('DepartmentController@index')
+        ->with('success','Deleted Successfully')
+        ->with('department',Department::orderBy('dept_id','DESC')->get());
     }
 }
