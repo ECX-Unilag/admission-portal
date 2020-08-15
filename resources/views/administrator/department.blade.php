@@ -55,7 +55,7 @@
                                 <tr>
                                     <td>{{$loop->index+1}}</td>
                                     <td>{{$department->department}}</td>
-                                    <td>{{$department->faculty}}</td>
+                                    <td>Faculty of {{$department->faculty}}</td>
                                 <td><form action="department/{{$department->dept_id}}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
