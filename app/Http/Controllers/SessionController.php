@@ -14,7 +14,7 @@ class SessionController extends Controller
      */
     public function index()
     {
-        return view('administrator.sessions')->with('session',Session::orderBy('session_id','DESC')->get());
+        return view('administrator.sessions')->with('session',Session::orderBy('session','DESC')->get());
     }
 
     /**
@@ -41,7 +41,7 @@ class SessionController extends Controller
         $session = new Session;
         $session->session = $request->input('session');
         $session->save();
-        return redirect()->action('SessionController@index')->with('success','Session Added')->with('session',Session::orderBy('session_id','DESC')->get());
+        return redirect()->action('SessionController@index')->with('success','Session Added')->with('session',Session::orderBy('session','DESC')->get());
     }
 
     /**
@@ -89,6 +89,6 @@ class SessionController extends Controller
         $session->delete();
         return redirect()->action('SessionController@index')
         ->with('success','Deleted Successfully')
-        ->with('session',Session::orderBy('session_id','DESC')->get());
+        ->with('session',Session::orderBy('session','DESC')->get());
     }
 }

@@ -14,7 +14,7 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('administrator.department')->with('department',Department::orderBy('dept_id','DESC')->get());
+        return view('administrator.department')->with('department',Department::orderBy('department','ASC')->get());
     }
 
     /**
@@ -42,7 +42,7 @@ class DepartmentController extends Controller
         $department->faculty = $request->input('faculty');
         $department->department = $request->input('department');
         $department->save();
-        return redirect()->action('DepartmentController@index')->with('success','Department Added')->with('department',Department::orderBy('dept_id','DESC')->get());
+        return redirect()->action('DepartmentController@index')->with('success','Department Added')->with('department',Department::orderBy('department','ASC')->get());
     }
 
     /**
@@ -90,6 +90,6 @@ class DepartmentController extends Controller
         $department->delete();
         return redirect()->action('DepartmentController@index')
         ->with('success','Deleted Successfully')
-        ->with('department',Department::orderBy('dept_id','DESC')->get());
+        ->with('department',Department::orderBy('department','ASC')->get());
     }
 }
