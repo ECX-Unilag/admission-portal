@@ -13,6 +13,7 @@ class DepartmentSeeder extends Seeder
     public function run()
     {
         DB::table('departments')->insert([
+            'faculty' => Str::random(10),
             'department' => Str::random(10),
         ]);
     }

@@ -39,6 +39,7 @@ class DepartmentController extends Controller
             'department' => 'required | min:3',
         ]);
         $department = new Department;
+        $department->faculty = $request->input('faculty');
         $department->department = $request->input('department');
         $department->save();
         return redirect()->action('DepartmentController@index')->with('success','Department Added')->with('department',Department::orderBy('dept_id','DESC')->get());

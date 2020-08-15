@@ -28,6 +28,7 @@
                                     <form action="department" method="POST">
                                         <div class="form-group">
                                             <label for="department">Department Name</label>
+                                            <input type="text" name="faculty" class="form-control rounded-0" placeholder="Faculty" required>
                                             <input type="text" name="department" class="form-control rounded-0" placeholder="Department" required>
                                         </div>
                                         {{csrf_field()}}
@@ -43,6 +44,7 @@
                                 <tr>
                                     <th>S/N</th>
                                     <th>Department</th>
+                                    <th>Faculty</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -53,6 +55,7 @@
                                 <tr>
                                     <td>{{$loop->index+1}}</td>
                                     <td>{{$department->department}}</td>
+                                    <td>{{$department->faculty}}</td>
                                 <td><form action="department/{{$department->dept_id}}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
