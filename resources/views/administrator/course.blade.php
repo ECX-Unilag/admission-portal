@@ -3,12 +3,12 @@
 <div class="page-title-box">
                         <div class="row align-items-center">
                             <div class="col-sm-6">
-                                <h4 class="page-title">Dashboard</h4>
+                                <h4 class="page-title">Course</h4>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-right">
                                     <li class="breadcrumb-item"><a href="javascript:void(0);">ECX</a></li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Course</li>
                                 </ol>
                             </div>
                         </div>
@@ -18,108 +18,52 @@
 
                     <div class="row">
 
-                        <div class="col-sm-6 col-xl-3">
+                        <div class="col-md-6 col-xl-4">
+                            @isset ($success)
+                                <div class="alert alert-success">Course has been added</div>
+                            @endif
                             <div class="card">
                                 <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Registered Student</h5>
-                                    </div>
-                                    <h3 class="mt-4">43,225</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p> -->
+                                    <form action="course" method="POST">
+                                        <div class="form-group">
+                                            <label for="course-title">Course Title</label>
+                                            <input type="text" name="course" class="form-control rounded-0" placeholder="Computer Science" required>
+                                        </div>
+                                        {{csrf_field()}}
+                                        <button type="submit" class="btn btn-block btn-primary">Add Course</button>
+                                       
+                                    </form>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6 col-xl-8">
+                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Position</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
 
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-briefcase-check bg-success text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Transactions</h5>
-                                    </div>
-                                    <h3 class="mt-4">&#8358; 73,265</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">88%</span></p> -->
-                                </div>
-                            </div>
+
+                                <tbody>
+                                    @foreach ($course as $course)
+                                <tr>
+                                    <td>{{$loop->index+1}}</td>
+                                    <td>{{$course->title}}</td>
+                                <td><form action="course/{{$course->course_id}}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger">Delete</button> 
+                                    </form>
+                                </td>
+                                </tr>                                      
+                                @endforeach
+                            </tbody>
+                        </table>
                         </div>
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Registered Admin</h5>
-                                    </div>
-                                    <h3 class="mt-4">447</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p> -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-heading p-4">
-                                    <div class="mini-stat-icon float-right">
-                                        <i class="mdi mdi-buffer bg-danger text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="font-16">Admitted Student</h5>
-                                    </div>
-                                    <h3 class="mt-4">234</h3>
-                                    <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p> -->
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <!-- <div class="col-xl-8">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-
-                                    <h4 class="mt-0 header-title mb-4">Area Chart</h4>
-
-                                    <div id="morris-area-example" class="morris-charts morris-chart-height"></div>
-
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- end col -->
-
-                        <!-- <div class="col-xl-4">
-                            <div class="card m-b-30">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4">Donut Chart</h4>
-
-                                    <div id="morris-donut-example" class="morris-charts morris-chart-height"></div>
-
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- end col -->
-                    </div>
-                    <!-- end row -->
-
+                       
                             <!-- END ROW -->
 
                 </div>

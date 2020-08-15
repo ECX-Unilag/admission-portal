@@ -142,6 +142,9 @@
                         <li>
                             <a href="calendar.html" class="waves-effect"><i class="icon-calendar"></i><span> Admin Manager </span></a>
                         </li>
+                        <li>
+                            <a href="/course" class="waves-effect"><i class="icon-calendar"></i><span> Course </span></a>
+                        </li>
 
                         <!-- <li>
                             <a href="javascript:void(0);" class="waves-effect"><i class="icon-paper-sheet"></i><span> Pages <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
