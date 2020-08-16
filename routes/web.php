@@ -26,5 +26,5 @@ Route::resource('admitted', 'AdmittedController');
 Route::resource('pending', 'PendingController');
 Route::resource('rejected', 'RejectedController');
 Route::resource('faculty', 'FacultyController');
-Route::resource('applicant/{applicant_id}', 'ApplicantController');
+Route::get('applicant/{applicant_id}', 'ApplicantController@index');
 
