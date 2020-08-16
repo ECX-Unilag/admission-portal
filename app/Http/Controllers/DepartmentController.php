@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Department;
+use App\Faculty;
 use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
@@ -14,7 +15,9 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('administrator.department')->with('department',Department::orderBy('department','ASC')->get());
+        return view('administrator.department')
+        ->with('department',Department::orderBy('department','ASC')->get())
+        ->with('faculty',Faculty::orderBy('title','ASC')->get());
     }
 
     /**

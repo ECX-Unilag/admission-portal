@@ -28,7 +28,11 @@
                                     <form action="department" method="POST">
                                         <div class="form-group">
                                             <label for="department">Department Name</label>
-                                            <input type="text" name="faculty" class="form-control rounded-0" placeholder="Faculty" required>
+                                            <select name="faculty" id="faculty-select" class="form-control">
+                                                @foreach($faculty AS $faculty)
+                                                    <option value="{{ $faculty->title }}">{{ $faculty->title }}</option>
+                                                @endforeach
+                                            </select>
                                             <input type="text" name="department" class="form-control rounded-0" placeholder="Department" required>
                                         </div>
                                         {{csrf_field()}}
