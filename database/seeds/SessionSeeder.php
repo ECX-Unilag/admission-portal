@@ -12,8 +12,6 @@ class SessionSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('sessions')->insert([
-            'session' => Str::random(4).'-'.Str::random(4),
-        ]);
+        $session = factory(App\Session::class, 1)->create();
     }
 }

@@ -5,6 +5,6 @@ use App\Session;
 
 $factory->define(App\Session::class, function (Faker $faker) {
     return [
-        'session' => $faker->word,
+        'session' => $faker->year.'-'.$faker->year,
     ];
 });

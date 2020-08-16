@@ -131,11 +131,11 @@
                         </li>
 
                         <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-mail-open"></i><span> Student Manager <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-mail-open"></i><span> Applicant Manager <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                             <ul class="submenu">
-                                <li><a href="email-inbox.html">View New Student</a></li>
-                                <li><a href="email-read.html">Email Read</a></li>
-                                <li><a href="email-compose.html">Email Compose</a></li>
+                                <li><a href="/applicants">View Applicants</a></li>
+                                <li><a href="/admitted">Admitted</a></li>
+                                <li><a href="/rejected">Rejected</a></li>
                             </ul>
                         </li>
 

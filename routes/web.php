@@ -21,3 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('course', 'courseController');
 Route::resource('department', 'DepartmentController');
 Route::resource('sessions', 'SessionController');
+Route::resource('applicants', 'ApplicantsController');
+
+Route::resource('applicant/{applicant_id}', 'ApplicantController');
+
+Route::resource('/applicant','ApplicantController');

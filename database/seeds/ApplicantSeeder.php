@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-class DepartmentSeeder extends Seeder
+class ApplicantSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        $department = factory(App\Department::class, 1)->create();
+        $applicant = factory(App\Applicant::class, 1)->create();
     }
 }
