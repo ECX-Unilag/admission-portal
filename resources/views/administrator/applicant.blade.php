@@ -16,28 +16,29 @@
     <!-- end row -->
 </div>
 <!-- end page-title -->
-
+<div class="row">
+    <div class="col-md-12">
+    <form action="{{route('applicantionbyyear')}}" method="GET">
+        <div class="form-inline">
+            <label for="">Year</label>
+            <select name="session" class="form-control" required>
+                <option value="">--Select Year--</option>
+                @foreach($session as $session)
+                    <option value="{{$session->session_id}}">{{$session->session}}</option>
+                @endforeach
+            </select>
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </form>
+    </div>
+</div>
 <div class="row">
 
-    <div class="col-md-6 col-xl-4">
         @if (Session::get('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>
         @endif
-        <!--<div class="card">
-            <div class="card-heading p-4">
-                <form action="sessions" method="POST">
-                    <div class="form-group">
-                        <label for="session">Session</label>
-                        <input type="text" name="session" class="form-control rounded-0" placeholder="Session" required>
-                    </div>
-                    {{csrf_field()}}
-                    <button type="submit" class="btn btn-block btn-primary">Add Session</button>
-                    
-                </form>
-            </div>
-        </div>-->
-    </div>
-    <div class="col-md-6 col-xl-8">
+
+    <div class="col-md-12 col-xl-12">
         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
             <thead>
             <tr>
