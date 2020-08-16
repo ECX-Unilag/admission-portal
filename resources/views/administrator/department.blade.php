@@ -28,7 +28,7 @@
                                     <form action="department" method="POST">
                                         <div class="form-group">
                                             <label for="department">Department Name</label>
-                                            <select name="faculty" id="faculty-select" class="form-control">
+                                            <select name="faculty" id="faculty-select" class="form-control custom-select">
                                                 @foreach($faculty AS $faculty)
                                                     <option value="{{ $faculty->title }}">{{ $faculty->title }}</option>
                                                 @endforeach
