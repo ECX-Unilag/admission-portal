@@ -131,7 +131,7 @@
                         </li>
 
                         <li>
-                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-mail-open"></i><span> Applicant Manager <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="icon-profile"></i><span> Applicant Manager <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                             <ul class="submenu">
                                 <li><a href="/applicants">View Applicants</a></li>
                                 <li><a href="/pending">Pending</a></li>
@@ -145,6 +145,9 @@
                         </li>
                         <li>
                             <a href="/course" class="waves-effect"><i class="icon-pencil"></i><span> Course </span></a>
+                        </li>
+                        <li>
+                            <a href="/faculty" class="waves-effect"><i class="icon-sinth"></i><span> Faculty </span></a>
                         </li>
                         <li>
                             <a href="/department" class="waves-effect"><i class="icon-home"></i><span> Department </span></a>
