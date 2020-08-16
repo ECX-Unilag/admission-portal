@@ -26,3 +26,4 @@ Route::resource('applicants', 'ApplicantsController');
 Route::resource('applicant/{applicant_id}', 'ApplicantController');
 
 Route::resource('/applicant','ApplicantController');
+Route::resource('faculty', 'FacultyController');
