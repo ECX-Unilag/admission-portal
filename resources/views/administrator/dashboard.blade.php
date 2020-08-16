@@ -27,9 +27,9 @@
                                     <div>
                                         <h5 class="font-16">Registered Student</h5>
                                     </div>
-                                    <h3 class="mt-4">43,225</h3>
+                                    <h3 class="mt-4">{{ $applicant_no }}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p> -->
                                 </div>
@@ -63,9 +63,9 @@
                                     <div>
                                         <h5 class="font-16">Registered Admin</h5>
                                     </div>
-                                    <h3 class="mt-4">447</h3>
+                                    <h3 class="mt-4">{{ $admin_no }}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p> -->
                                 </div>
@@ -81,9 +81,9 @@
                                     <div>
                                         <h5 class="font-16">Admitted Student</h5>
                                     </div>
-                                    <h3 class="mt-4">234</h3>
+                                    <h3 class="mt-4">{{ $admitted_no }}</h3>
                                     <div class="progress mt-4" style="height: 4px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <!-- <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p> -->
                                 </div>
