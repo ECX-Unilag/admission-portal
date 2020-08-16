@@ -134,6 +134,7 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="icon-mail-open"></i><span> Applicant Manager <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                             <ul class="submenu">
                                 <li><a href="/applicants">View Applicants</a></li>
+                                <li><a href="/pending">Pending</a></li>
                                 <li><a href="/admitted">Admitted</a></li>
                                 <li><a href="/rejected">Rejected</a></li>
                             </ul>

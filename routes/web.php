@@ -22,8 +22,9 @@ Route::resource('course', 'courseController');
 Route::resource('department', 'DepartmentController');
 Route::resource('sessions', 'SessionController');
 Route::resource('applicants', 'ApplicantsController');
-
+Route::resource('admitted', 'AdmittedController');
+Route::resource('pending', 'PendingController');
+Route::resource('rejected', 'RejectedController');
+Route::resource('faculty', 'FacultyController');
 Route::resource('applicant/{applicant_id}', 'ApplicantController');
 
-Route::resource('/applicant','ApplicantController');
-Route::resource('faculty', 'FacultyController');

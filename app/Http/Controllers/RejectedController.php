@@ -5,19 +5,19 @@ namespace App\Http\Controllers;
 use App\Applicant;
 use Illuminate\Http\Request;
 
-class ApplicantController extends Controller
+class RejectedController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
-        return view('administrator.applicant.profile')->with('applicant', Applicant::where('applicant_id', $id)->get());
+        return view('administrator.applicant.state')->with('applicant', Applicant::where('admission_status', 'rejected')->get());
     }
 
-    /**->with('applicant',Applicant::orderBy('lastname','ASC')->get()); 
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

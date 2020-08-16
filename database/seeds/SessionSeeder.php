@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class SessionSeeder extends Seeder
 {
@@ -12,6 +11,6 @@ class SessionSeeder extends Seeder
      */
     public function run()
     {
-        $session = factory(App\Session::class, 1)->create();
+        $session = factory(App\Session::class, 5)->create();
     }
 }
