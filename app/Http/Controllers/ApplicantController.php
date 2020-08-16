@@ -14,7 +14,7 @@ class ApplicantController extends Controller
      */
     public function index($id)
     {
-        return view('administrator.applicant.profile')->with('applicant', Applicant::where('applicant_id', $id)->get());
+        return view('administrator.applicant.profile')->with('applicant', Applicant::where('applicant_id', $id)->first());
     }
 
     /**->with('applicant',Applicant::orderBy('lastname','ASC')->get()); 
