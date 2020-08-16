@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('course', 'courseController');
 Route::resource('department', 'DepartmentController');
 Route::resource('sessions', 'SessionController');
+Route::resource('faculty', 'FacultyController');
