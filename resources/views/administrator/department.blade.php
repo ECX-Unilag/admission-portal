@@ -30,7 +30,7 @@
                                             <label for="department">Department Name</label>
                                             <select name="faculty" id="faculty-select" class="form-control custom-select">
                                                 @foreach($faculty AS $faculty)
-                                                    <option value="{{ $faculty->title }}">{{ $faculty->title }}</option>
+                                                    <option value="{{ $faculty->faculties_id }}">{{ $faculty->title }}</option>
                                                 @endforeach
                                             </select>
                                             <input type="text" name="department" class="form-control rounded-0" placeholder="Department" required>
@@ -52,14 +52,20 @@
                                     <th>Action</th>
                                 </tr>
                                 </thead>
-
-
+                                @php
+                                    $facultylist = array();
+                                @endphp
+                                @foreach ($faculties as $faculties)
+                                    @php
+                                        $facultylist[$faculties->faculties_id] = $faculties->title
+                                    @endphp
+                                @endforeach
                                 <tbody>
-                                    @foreach ($department as $department)
+                                @foreach ($department as $department)
                                 <tr>
                                     <td>{{$loop->index+1}}</td>
                                     <td>{{$department->department}}</td>
-                                    <td>Faculty of {{$department->faculty}}</td>
+                                    <td>Faculty of {{$facultylist[$department->faculties_id]}}</td>
                                 <td><form action="department/{{$department->dept_id}}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
