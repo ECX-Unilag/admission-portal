@@ -23,6 +23,7 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
             <ul>
+                <li><a class="sign-up-btn" href="/register">Sign Up</a></li>
             </ul>
             <div id="openButton" class="mobile-nav-hamburger display-none">
                 <div class="line-1"></div>
@@ -36,6 +37,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/register">Sign Up</a></li>
                     </ul>
                     <a style="text-align: center;" href="/"><img
                             src="{{asset('assets/images/brand (2).png')}}"></a>

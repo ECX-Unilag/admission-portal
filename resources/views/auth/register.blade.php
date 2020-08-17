@@ -23,7 +23,7 @@
         <li><a href="/contact">Contact Us</a></li>
       </ul>
       <ul>
-        <li><a href="/login">Login</a></li>
+        <li><a href="/login" class="sign-up-btn">Login</a></li>
       </ul>
       <div id="openButton" class="mobile-nav-hamburger display-none">
         <div class="line-1"></div>
@@ -89,40 +89,6 @@
           <strong>{{ $errors->first('password') }}</strong>
         </span>
       @endif
-      <!--<div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Phone Number</label>
-          <input type="text" class="form-control" placeholder="Phone Number">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label >Sex</label>
-          <select name="sex" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected hidden>Choose...</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other</option>
-          </select>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="email">Date of Birth</label>
-          <input name="country" type="date" class="form-control" value="20-01-2020">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="email">City</label>
-          <input name="city" type="text" class="form-control" placeholder="City">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="email">Country</label>
-          <input name="country" type="text" class="form-control" placeholder="Country">
-        </div>-->
       </div>
       <button class="my-3" type="submit">Sign Up</button>
     </form>

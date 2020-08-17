@@ -16,12 +16,11 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img class="logo" src="{{asset('assets/images/brand (2).png')}}" alt="ECX Logo"></a>
+            <a href="/"><img class="logo" src="{{asset('assets/images/brand (2).png')}}" alt="ECX Logo"></a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="create-profile.html">Create Profile</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
             <ul>
                 <li><a class="active" href="/login">Login</a></li>
@@ -35,13 +34,12 @@
                 <div>
                     <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="create-profile.html">Create Profile</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                         <li><a href="/login">Login</a></li>
                     </ul>
-                    <a style="text-align: center;" href="index.html"><img
+                    <a style="text-align: center;" href="/"><img
                             src="{{asset('assets/images/brand (2).png')}}"></a>
                 </div>
             </div>
