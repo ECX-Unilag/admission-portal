@@ -24,7 +24,7 @@
         <div id="ndmodal" class="side_nav">
             <!-- <div id="myModal" class="mobile-nav"> -->
             <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
-            <img class="py-4 mx-auto d-block" src="./assets/images/brand (2).png" />
+            <img class="py-4 mx-auto d-block" src="/assets/images/brand (2).png" />
             <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu" id="side-menu">
