@@ -17,7 +17,6 @@
       <ul>
         <li><a class="active" href="/">Home</a></li>
         <li><a href="/about">About Us</a></li>
-        <li><a href="/create-profile">Create Profile</a></li>
         <li><a href="/contact">Contact Us</a></li>
       </ul>
       <ul>
@@ -35,7 +34,6 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/create-profile">Create Profile</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Sign Up</a></li>
@@ -87,26 +85,27 @@ Registrants for ECX mid-year training session <br> for Front-end Developers, Bac
           </ul>
         </div>
         <button id="vbutton" class="btn-5">
-          view more
+          View More
         </button>
       </div>
 
       <div class="log">
-        <form name="login" id="enter">
-          <h2>Applicant Login</h2>
+        <form name="login" id="enter" method="POST" action="{{ route('login') }}">
+        {{ csrf_field() }}
+          <h2>User Login</h2>
           <label class="log-label" for="username">Username</label>
           <br>
-          <input name="username" placeholder="  JAMB Registration Number" type="text">
+          <input name="email" placeholder="  Email" type="text">
           <br>
-          <label for="pw">Password</label>
+          <label for="password">Password</label>
           <br>
-          <input name="pw" placeholder="  enter password" type="password" id="">
+          <input name="password" placeholder="   Password" type="password" id="">
           <br>
 
           <input id="sub" type="submit" value="Login">
           <br>
-          <p class="doublespan"><a class="doublespan" href="#">forgot password?</a> <span>/<a class="doublespan"
-                href="#">Can't access account?</a></span></p>
+          <p class="doublespan"><a class="doublespan" href="/forgotpassword">forgot password?</a> <span>/<a class="doublespan"
+                href="mailto:ecx@unilag.edu">Can't access account?</a></span></p>
 
         </form>
       </div>

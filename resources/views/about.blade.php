@@ -11,12 +11,11 @@
 <body>
     <header>
         <nav>
-          <a href="index.html"><img class="logo" src="./assets/images/brand (2).png" alt="ECX Logo"></a>
+          <a href="index.html"><img class="logo" src="/assets/images/brand (2).png" alt="ECX Logo"></a>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a class="active" href="/about">About Us</a></li>
-            <li><a href="create-profile">Create Profile</a></li>
-            <li><a href="./contact">Contact Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
           <ul>
             <li><a href="/login">Login</a></li>
@@ -33,7 +32,6 @@
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
-                <li><a href="/create-profile">Create Profile</a></li>
                 <li><a href="/contact">Contact Us</a></li>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Sign Up</a></li>
