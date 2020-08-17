@@ -111,8 +111,22 @@ Registrants for ECX mid-year training session <br> for Front-end Developers, Bac
       </div>
     </div>
   </main>
-
-  <footer></footer>
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Admin Login</a>
+                    @endauth
+                </div>
+            @endif
 
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/portal.js"></script>

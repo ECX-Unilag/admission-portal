@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/sign-up.css">
@@ -24,7 +24,6 @@
       </ul>
       <ul>
         <li><a href="/login">Login</a></li>
-        <li><a class="sign-up-btn" href="/register">Sign Up</a></li>
       </ul>
       <div id="openButton" class="mobile-nav-hamburger display-none">
         <div class="line-1"></div>
@@ -39,7 +38,6 @@
             <li><a href="/about">About Us</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/login">Login</a></li>
-            <li><a href="/register">Sign Up</a></li>
           </ul>
           <a style="text-align: center;" href="/"><img src="/assets/images/brand (2).png"></a>
         </div>
@@ -128,10 +126,6 @@
       </div>
       <button class="my-3" type="submit">Sign Up</button>
     </form>
-    <div class="other-details my-md-4">
-      <a href="/forgotpassword">Forgot Password</a>
-      <span>Already have an Account?<a href="/login">Sign In</a></span>
-    </div>
   </main>
 
   <footer class="mr-0"></footer>

@@ -43,3 +43,4 @@ Route::get('applicant/{applicant_id}', 'ApplicantController@index');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
+
