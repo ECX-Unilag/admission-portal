@@ -5,7 +5,7 @@ use App\Department;
 
 $factory->define(App\Department::class, function (Faker $faker) {
     return [
-        'faculty' => $faker->word,
+        'faculties_id' => $faker->randomNumber,
         'department' => $faker->word,
     ];
 });

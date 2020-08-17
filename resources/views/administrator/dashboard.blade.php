@@ -1,5 +1,8 @@
 @extends('layouts.admin_sidebar')
 @section('content')
+@isset ($message)
+    {{$message}}
+@endif
 <div class="page-title-box">
                         <div class="row align-items-center">
                             <div class="col-sm-6">

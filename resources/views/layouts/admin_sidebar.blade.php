@@ -24,7 +24,7 @@
         <div id="ndmodal" class="side_nav">
             <!-- <div id="myModal" class="mobile-nav"> -->
             <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
-            <img class="py-4 mx-auto d-block" src="./assets/images/brand (2).png" />
+            <img class="py-4 mx-auto d-block" src="/assets/images/brand (2).png" />
             <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu" id="side-menu">
@@ -65,7 +65,7 @@
                 </div>
             <!-- </div>  -->
         </div>       
-        <div class="container col-lg-9">
+        <div class="container col-lg-9 here">
             <div class="py-4 d-flex justify-content-between">
                 <div id="openButton" class="mobile-nav-hamburger d-flex d-lg-none ml-0">
                     <div class="line-1"></div>
@@ -92,10 +92,11 @@
                         @yield('content')
                     </div>
                 </div>
+                <footer>
+                    <small class="text-center">&copy; 2020 Admission Portal. Crafted by <b>ECX Internship</b></small>
+                </footer>
             </div>
-            <footer>
-                <small class="text-center">&copy; 2020 Admission Portal. Crafted by <b>ECX Internship</b></small>
-            </footer>
+            
         </div>
 
             

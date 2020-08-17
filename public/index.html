@@ -5,23 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/portal.css">
-  <link rel="stylesheet" href="/assets/css/header-nav.css">
+  <link rel="stylesheet" href="./assets/css/portal.css">
+  <link rel="stylesheet" href="assets/css/header-nav.css">
   <title>Admissions Portal</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="/"><img class="logo" src="/assets/images/brand (2).png" alt="ECX Logo"></a>
+      <a href="index.html"><img class="logo" src="./assets/images/brand (2).png" alt="ECX Logo"></a>
       <ul>
-        <li><a class="active" href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="create-profile.html">Create Profile</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
       </ul>
       <ul>
-        <li><a href="/login">Login</a></li>
-        <li><a class="sign-up-btn" href="/register">Sign Up</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a class="sign-up-btn" href="./sign-up.html">Sign Up</a></li>
       </ul>
       <div id="openButton" class="mobile-nav-hamburger display-none">
         <div class="line-1"></div>
@@ -32,13 +33,14 @@
         <div>
           <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Sign Up</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="create-profile.html">Create Profile</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./sign-up.html">Sign Up</a></li>
           </ul>
-          <a style="text-align: center;" href="/"><img src="/assets/images/brand (2).png"></a>
+          <a style="text-align: center;" href="index.html"><img src="./assets/images/brand (2).png"></a>
         </div>
       </div>
     </nav>
@@ -52,12 +54,12 @@
         <p class="easy"> We have provided an easy to follow admission <br> process but
           if you need any guidance please <br> do not hesitate to contact us.</p>
 
-        <a href='/create-profile'><button class="btn1">Get Started</button></a>
-        <a href="/contact"> <button class="btn2">Contact Us</button></a>
+        <a href='create-profile.html'><button class="btn1">Get Started</button></a>
+        <a href="./contact.html"> <button class="btn2">Contact Us</button></a>
 
       </div>
       <div class="stu-img">
-        <img src="/assets/images/Capture.PNG" alt="">
+        <img src="Images/Capture.PNG" alt="">
       </div>
     </div>
 
@@ -85,51 +87,36 @@ Registrants for ECX mid-year training session <br> for Front-end Developers, Bac
           </ul>
         </div>
         <button id="vbutton" class="btn-5">
-          View More
+          view more
         </button>
       </div>
 
       <div class="log">
-        <form name="login" id="enter" method="POST" action="{{ route('login') }}">
-        {{ csrf_field() }}
-          <h2>User Login</h2>
+        <form name="login" id="enter">
+          <h2>Applicant Login</h2>
           <label class="log-label" for="username">Username</label>
           <br>
-          <input name="email" placeholder="  Email" type="text">
+          <input name="username" placeholder="  JAMB Registration Number" type="text">
           <br>
-          <label for="password">Password</label>
+          <label for="pw">Password</label>
           <br>
-          <input name="password" placeholder="   Password" type="password" id="">
+          <input name="pw" placeholder="  enter password" type="password" id="">
           <br>
 
           <input id="sub" type="submit" value="Login">
           <br>
-          <p class="doublespan"><a class="doublespan" href="/forgotpassword">forgot password?</a> <span>/<a class="doublespan"
-                href="mailto:ecx@unilag.edu">Can't access account?</a></span></p>
+          <p class="doublespan"><a class="doublespan" href="#">forgot password?</a> <span>/<a class="doublespan"
+                href="#">Can't access account?</a></span></p>
 
         </form>
       </div>
     </div>
   </main>
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Admin Login</a>
-                    @endauth
-                </div>
-            @endif
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/portal.js"></script>
+  <footer></footer>
+
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/portal.js"></script>
 </body>
 
 </html>

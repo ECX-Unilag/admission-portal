@@ -17,7 +17,8 @@ class DepartmentController extends Controller
     {
         return view('administrator.department')
         ->with('department',Department::orderBy('department','ASC')->get())
-        ->with('faculty',Faculty::orderBy('title','ASC')->get());
+        ->with('faculty',Faculty::orderBy('title','ASC')->get())
+        ->with('faculties',Faculty::orderBy('faculties_id','ASC')->get());
     }
 
     /**
@@ -42,10 +43,14 @@ class DepartmentController extends Controller
             'department' => 'required | min:3',
         ]);
         $department = new Department;
-        $department->faculty = $request->input('faculty');
+
+        $department->faculties_id = $request->input('faculty');
         $department->department = $request->input('department');
         $department->save();
-        return redirect()->action('DepartmentController@index')->with('success','Department Added')->with('department',Department::orderBy('department','ASC')->get());
+        return redirect()->action('DepartmentController@index')
+        ->with('success','Department Added')
+        ->with('department',Department::orderBy('department','ASC')->get())
+        ->with('faculty',Faculty::where('faculties_id',$request->input('faculty'))->first());
     }
 
     /**

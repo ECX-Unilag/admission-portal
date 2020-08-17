@@ -14,10 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/create-profile', function () {
+    return view('create-profile');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@adminindex')->middleware('is_admin')->name('admin');
 Route::resource('course', 'courseController');
 Route::resource('department', 'DepartmentController');
 Route::resource('sessions', 'SessionController');

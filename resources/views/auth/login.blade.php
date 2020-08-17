@@ -16,12 +16,11 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img class="logo" src="{{asset('assets/images/brand (2).png')}}" alt="ECX Logo"></a>
+            <a href="/"><img class="logo" src="{{asset('assets/images/brand (2).png')}}" alt="ECX Logo"></a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="create-profile.html">Create Profile</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
             <ul>
             </ul>
@@ -34,12 +33,11 @@
                 <div>
                     <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="create-profile.html">Create Profile</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
-                    <a style="text-align: center;" href="index.html"><img
+                    <a style="text-align: center;" href="/"><img
                             src="{{asset('assets/images/brand (2).png')}}"></a>
                 </div>
             </div>
@@ -47,7 +45,7 @@
     </header>
 
     <main class="container col-lg-5 col-xl-4 col-sm-8 col-md-6">
-        <h1>Admin Login</h1>
+        
         <form class="form-horizontal m-t-30" method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
