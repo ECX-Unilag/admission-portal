@@ -13,16 +13,16 @@
 <body>
   <header>
     <nav>
-      <a href="index.html"><img class="logo" src="/assets/images/brand (2).png" alt="ECX Logo"></a>
+      <a href="/"><img class="logo" src="/assets/images/brand (2).png" alt="ECX Logo"></a>
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="About.html">About Us</a></li>
-        <li><a href="create-profile.html">Create Profile</a></li>
-        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/create-profile">Create Profile</a></li>
+        <li><a href="/contact">Contact Us</a></li>
       </ul>
       <ul>
-        <li><a href="./login.html">Login</a></li>
-        <li><a class="sign-up-btn" href="./sign-up.html">Sign Up</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a class="sign-up-btn" href="/register">Sign Up</a></li>
       </ul>
       <div id="openButton" class="mobile-nav-hamburger display-none">
         <div class="line-1"></div>
@@ -33,14 +33,14 @@
         <div>
           <span style="cursor: pointer;" id="closeBtn" class="close">&times;</span>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About Us</a></li>
-            <li><a href="create-profile.html">Create Profile</a></li>
-            <li><a href="./contact.html">Contact Us</a></li>
-            <li><a href="./login.html">Login</a></li>
-            <li><a href="./sign-up.html">Sign Up</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/create-profile">Create Profile</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign Up</a></li>
           </ul>
-          <a style="text-align: center;" href="index.html"><img src="./assets/images/brand (2).png"></a>
+          <a style="text-align: center;" href="/"><img src="/assets/images/brand (2).png"></a>
         </div>
       </div>
     </nav>
@@ -54,8 +54,8 @@
         <p class="easy"> We have provided an easy to follow admission <br> process but
           if you need any guidance please <br> do not hesitate to contact us.</p>
 
-        <a href='create-profile.html'><button class="btn1">Get Started</button></a>
-        <a href="./contact.html"> <button class="btn2">Contact Us</button></a>
+        <a href='/create-profile'><button class="btn1">Get Started</button></a>
+        <a href="/contact"> <button class="btn2">Contact Us</button></a>
 
       </div>
       <div class="stu-img">
@@ -115,8 +115,8 @@ Registrants for ECX mid-year training session <br> for Front-end Developers, Bac
 
   <footer></footer>
 
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/portal.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/portal.js"></script>
 </body>
 
 </html>
