@@ -24,8 +24,6 @@
                 <li><a href="./contact.html">Contact Us</a></li>
             </ul>
             <ul>
-                <li><a class="active" href="./login.html">Login</a></li>
-                <li><a class="sign-up-btn" href="./sign-up.html">Sign Up</a></li>
             </ul>
             <div id="openButton" class="mobile-nav-hamburger display-none">
                 <div class="line-1"></div>
@@ -40,8 +38,6 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="create-profile.html">Create Profile</a></li>
                         <li><a href="./contact.html">Contact Us</a></li>
-                        <li><a href="./login.html">Login</a></li>
-                        <li><a href="./sign-up.html">Sign Up</a></li>
                     </ul>
                     <a style="text-align: center;" href="index.html"><img
                             src="{{asset('assets/images/brand (2).png')}}"></a>
@@ -79,8 +75,7 @@
             <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Log In</button>
         </form>
         <div class="other-details">
-            <a href="./forgotpassword.html">Forgot Password</a>
-            <span>Don't have an account <a href="./sign-up.html">Sign Up</a></span>
+            <a href="/password/reset">Forgot Password</a>
         </div>
     </main>
 
