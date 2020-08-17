@@ -65,7 +65,7 @@
                 </div>
             <!-- </div>  -->
         </div>       
-        <div class="container col-lg-9">
+        <div class="container col-lg-9 here">
             <div class="py-4 d-flex justify-content-between">
                 <div id="openButton" class="mobile-nav-hamburger d-flex d-lg-none ml-0">
                     <div class="line-1"></div>
@@ -92,10 +92,11 @@
                         @yield('content')
                     </div>
                 </div>
+                <footer>
+                    <small class="text-center">&copy; 2020 Admission Portal. Crafted by <b>ECX Internship</b></small>
+                </footer>
             </div>
-            <footer>
-                <small class="text-center">&copy; 2020 Admission Portal. Crafted by <b>ECX Internship</b></small>
-            </footer>
+            
         </div>
 
             
