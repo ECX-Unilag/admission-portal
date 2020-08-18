@@ -104,18 +104,13 @@ Registrants for ECX mid-year training session <br> for Front-end Developers, Bac
 
           <input id="sub" type="submit" value="Login">
           <br>
-          <p class="doublespan"><a class="doublespan" href="/forgotpassword">forgot password?</a> <span>/<a class="doublespan"
+          <p class="doublespan"><a class="doublespan" href="/password/reset">forgot password?</a> <span>/<a class="doublespan"
                 href="mailto:ecx@unilag.edu">Can't access account?</a></span></p>
 
         </form>
       </div>
     </div>
   </main>
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
