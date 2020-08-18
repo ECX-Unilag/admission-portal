@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Applicant;
+use App\Department;
+use App\Faculty;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
@@ -14,7 +16,10 @@ class ApplicantController extends Controller
      */
     public function index($id)
     {
-        return view('administrator.applicant.profile')->with('applicant', Applicant::where('applicant_id', $id)->first());
+        return view('administrator.applicant.profile')
+        ->with('applicant', Applicant::where('applicant_id', $id)->first())
+        ->with('department',Department::orderBy('dept_id','ASC')->get())
+        ->with('faculties',Faculty::orderBy('faculties_id','ASC')->get());;
     }
 
     /**->with('applicant',Applicant::orderBy('lastname','ASC')->get()); 

@@ -30,7 +30,7 @@
                     <ul class="metismenu" id="side-menu">
                         <li class="menu-title">Menu</li>
                         <li>
-                            <a href="/home" class="waves-effect">
+                            <a href="/admin" class="waves-effect">
                                 <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span> Dashboard </span>
                             </a>
                         </li>

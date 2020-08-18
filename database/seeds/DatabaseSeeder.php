@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             SessionSeeder::class,
             ApplicantSeeder::class,
             FacultySeeder::class,
+            olevelSeeder::class,
         ]);
     }
 }
